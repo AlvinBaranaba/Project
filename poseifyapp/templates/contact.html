@@ -131,26 +131,27 @@
                     </table>
                 </div>
                 <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
-                    <form>
+                    <form method="post">
+                        {% csrf_token %}
                         <div class="row g-3">
                             <div class="col-md-6">
                                 <div class="form-floating">
                                     <input type="text" class="form-control bg-secondary border-0" id="name"
-                                        placeholder="Your Name">
+                                        placeholder="Your Name" name="name">
                                     <label for="name">Your Name</label>
                                 </div>
                             </div>
                             <div class="col-md-6">
                                 <div class="form-floating">
                                     <input type="email" class="form-control bg-secondary border-0" id="email"
-                                        placeholder="Your Email">
+                                        placeholder="Your Email" name="email">
                                     <label for="email">Your Email</label>
                                 </div>
                             </div>
                             <div class="col-12">
                                 <div class="form-floating">
                                     <input type="text" class="form-control bg-secondary border-0" id="subject"
-                                        placeholder="Subject">
+                                        placeholder="Subject" name="subject">
                                     <label for="subject">Subject</label>
                                 </div>
                             </div>
@@ -158,7 +159,7 @@
                                 <div class="form-floating">
                                     <textarea class="form-control bg-secondary border-0"
                                         placeholder="Leave a message here" id="message"
-                                        style="height: 150px"></textarea>
+                                        style="height: 150px" name="message"></textarea>
                                     <label for="message">Message</label>
                                 </div>
                             </div>

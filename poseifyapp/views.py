@@ -1,5 +1,8 @@
 from django.shortcuts import render, redirect
+from .forms import RegistrationForm
 from .models import Contact
+from django.contrib import messages
+from django.http import HttpResponse
 
 # Create your views here.
 def home(request):
@@ -21,3 +24,17 @@ def service(request):
     return render(request,'service.html')
 def team(request):
     return render(request,'team.html')
+
+def register(request):
+    if request.method == 'POST':
+        form = RegistrationForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Thank you for registering! We will be in touch soon.')
+            return redirect('my_home')
+        else:
+            # Force display of errors
+            return HttpResponse(f"<h1>Form Errors:</h1><pre>{form.errors.as_json()}</pre>")
+    else:
+        form = RegistrationForm()
+    return render(request, 'registration/register.html', {'form': form})

@@ -1,82 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
+
+{% extends "base.html" %}
 {% load static %}
-<head>
-    <meta charset="utf-8">
-    <title>Poseify - Modeling Agency</title>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <meta content="" name="keywords">
-    <meta content="" name="description">
-
-    <!-- Favicon -->
-    <link href="{% static 'img/favicon.ico' %}" rel="icon">
-
-    <!-- Google Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;700&family=Work+Sans:wght@400;600&display=swap"
-        rel="stylesheet">
-
-    <!-- Icon Font Stylesheet -->
-    <link href="{% static 'misc/all.min.css' %}" rel="stylesheet">
-    <link href="{% static 'misc/bootstrap-icons.css' %}" rel="stylesheet">
-
-    <!-- Libraries Stylesheet -->
-    <link href="{% static 'lib/animate/animate.min.css' %}" rel="stylesheet">
-    <link href="{% static 'lib/lightbox/css/lightbox.min.css' %}" rel="stylesheet">
-    <link href="{% static 'lib/owlcarousel/assets/owl.carousel.min.css' %}" rel="stylesheet">
-
-    <!-- Customized Bootstrap Stylesheet -->
-    <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
-
-    <!-- Template Stylesheet -->
-    <link href="{% static 'css/style.css' %}" rel="stylesheet">
-</head>
-
-<body>
-    <!-- Spinner Start -->
-{#    <div id="spinner"#}
-{#        class="show bg-dark position-fixed translate-middle w-100 vh-100 top-50 start-50 d-flex align-items-center justify-content-center">#}
-{#        <div class="spinner-grow text-primary" style="width: 3rem; height: 3rem;" role="status">#}
-{#            <span class="sr-only">Loading...</span>#}
-{#        </div>#}
-{#    </div>#}
-    <!-- Spinner End -->
-
-
-    <!-- Header Start -->
+{% block content %}
+    <!-- Carousel Start -->
     <div class="container-fluid p-0">
-        <nav class="navbar navbar-expand-lg navbar-dark px-lg-5">
-            <a href="{% url 'my_home' %}" class="navbar-brand ms-4 ms-lg-0">
-                <h2 class="mb-0 text-primary text-uppercase"><i class="fa-regular fa-face-smile me-1"></i>Poseify</h2>
-            </a>
-            <button type="button" class="navbar-toggler me-4" data-bs-toggle="collapse"
-                data-bs-target="#navbarCollapse">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarCollapse">
-                <div class="navbar-nav mx-auto p-4 p-lg-0">
-                    <a href="{% url 'my_home' %}" class="nav-item nav-link active">Home</a>
-                    <a href="{% url 'my_about' %}" class="nav-item nav-link">About</a>
-                    <a href="{% url 'my_service' %}" class="nav-item nav-link">Services</a>
-                    <div class="nav-item dropdown">
-                        <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Pages</a>
-                        <div class="dropdown-menu m-0">
-                            <a href="{% url 'my_team' %}" class="dropdown-item">Our Models</a>
-{#                            <a href="{% url 'my_testimonial' %}" class="dropdown-item">Testimonial</a>#}
-{#                            <a href="404.html" class="dropdown-item">404 Page</a>#}
-                        </div>
-                    </div>
-                    <a href="{% url 'my_contact' %}" class="nav-item nav-link">Contact</a>
-                </div>
-                <div class="d-none d-lg-flex">
-{#                    <a class="btn btn-outline-primary border-2" href="https://themewagon.com/themes/poseify">Download#}
-{#                        Now</a>#}
-                </div>
-            </div>
-        </nav>
-
         <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
             <div class="carousel-inner">
                 <div class="carousel-item active">
@@ -88,8 +15,7 @@
                                 <h1 class="display-1">Modeling Agency</h1>
                             </div>
                         </div>
-                        <p class="fs-5 mb-5 animated slideInDown">Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit.<br> Sed erat lectus, venenatis sit amet egestas eget, aliquet a nisl.</p>
+                        <p class="fs-5 mb-5 animated slideInDown">A modeling agency is a company that represents models and connects them with clients in the fashion, advertising, and entertainment industries. They manage the careers of models, finding them jobs, negotiating contracts, and handling finances. They also help models build their portfolios, which are collections of photos that showcase their looks and abilities. Additionally, they provide guidance and support to help models develop their careers and achieve their goals. By working with a modeling agency, models can get more jobs, better pay, and professional support, allowing them to focus on their craft.<br> </p>
                         <a href="#" class="btn btn-outline-primary border-2 py-3 px-5 animated slideInDown">Explore
                             More</a>
                     </div>
@@ -103,8 +29,7 @@
                                 <h1 class="display-1">Modeling Agency</h1>
                             </div>
                         </div>
-                        <p class="fs-5 mb-5 animated slideInDown">Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit.<br> Sed erat lectus, venenatis sit amet egestas eget, aliquet a nisl.</p>
+                        <p class="fs-5 mb-5 animated slideInDown">A modeling agency is a company that represents models and connects them with clients in the fashion, advertising, and entertainment industries. They manage the careers of models, finding them jobs, negotiating contracts, and handling finances. They also help models build their portfolios, which are collections of photos that showcase their looks and abilities. Additionally, they provide guidance and support to help models develop their careers and achieve their goals. By working with a modeling agency, models can get more jobs, better pay, and professional support, allowing them to focus on their craft.<br> </p>
                         <a href="#" class="btn btn-outline-primary border-2 py-3 px-5 animated slideInDown">Explore
                             More</a>
                     </div>
@@ -120,7 +45,7 @@
             </button>
         </div>
     </div>
-    <!-- Header End -->
+    <!-- Carousel End -->
 
 
     <!-- About Start -->
@@ -135,22 +60,17 @@
                                 <h1>About Our Agency</h1>
                             </div>
                         </div>
-                        <p class="mb-4 wow fadeInUp" data-wow-delay="0.2s">Tempor erat elitr rebum at clita. Diam dolor
-                            diam ipsum sit. Aliqu diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet
-                            lorem sit clita duo justo magna dolore erat amet. Stet no et lorem dolor et diam, amet duo
-                            ut dolore vero eos.</p>
+                        <p class="mb-4 wow fadeInUp" data-wow-delay="0.2s">A modeling agency is a company that connects models with clients in the fashion, advertising, and entertainment industries. They represent models, manage their careers, and handle the business side of things, allowing models to focus on their craft. The agency's job is to find models jobs, negotiate contracts, and ensure they get paid fairly. They also help models build their portfolios, develop their skills, and advance their careers. In return, the agency takes a commission on the model's earnings. By working with a modeling agency, models can gain access to top clients, get professional support, and increase their chances of success in the competitive modeling industry.</p>
                         <ul class="list-group list-group-flush mb-5 wow fadeInUp" data-wow-delay="0.3s">
                             <li class="list-group-item bg-dark text-body border-secondary ps-0">
-                                <i class="fa fa-check-circle text-primary me-1"></i> Lorem ipsum dolor sit amet
-                                consectetur elit.
+                                <i class="fa fa-check-circle text-primary me-1"></i>  Talent scouting: Agencies search for new talent, often through social media, online platforms, and open casting calls.
                             </li>
                             <li class="list-group-item bg-dark text-body border-secondary ps-0">
-                                <i class="fa fa-check-circle text-primary me-1"></i> Donec vehicula, sem ut tempus
-                                tempus.
+                                <i class="fa fa-check-circle text-primary me-1"></i>  Model development: Agencies provide training, guidance, and support to help models improve their craft and build their portfolios.
                             </li>
                             <li class="list-group-item bg-dark text-body border-secondary ps-0">
-                                <i class="fa fa-check-circle text-primary me-1"></i> Morbi mi dapibus, feugiat nisi non
-                                mollis justo.
+                                <i class="fa fa-check-circle text-primary me-1"></i> Job placement: Agencies connect models with clients, negotiating contracts and rates for jobs such as photoshoots, fashion shows, and commercials.
+
                             </li>
                         </ul>
                         <div class="row wow fadeInUp" data-wow-delay="0.4s">
@@ -193,10 +113,7 @@
                     <div class="col-md-7">
                         <div class="service-text px-5 px-md-0 py-md-5 wow fadeInRight" data-wow-delay="0.5s">
                             <h3 class="text-uppercase">Fashion Shows</h3>
-                            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam feugiat
-                                fermentum urna, sed gravida enim eleifend vitae. Ut rhoncus non metus at convallis.
-                                Maecenas pharetra placerat mauris. Phasellus quis egestas dui. Nullam ornare consectetur
-                                rhoncus. Praesent elit mauris, feugiat quis convallis et, egestas a tellus.</p>
+                            <p class="mb-4">A fashion show is an event where designers showcase their latest clothing and accessory collections on a runway or stage. The event typically features models walking down the catwalk, wearing the designer's creations, while music plays and an audience cheers. Fashion shows can range from small, intimate events to large, elaborate productions, and are often used to promote upcoming trends and styles. The models, often professionals or newcomers, are chosen for their fit and ability to showcase the clothing, and may include celebrities or influencers. The event may also feature special effects, lighting, and decorations to create an immersive experience. Fashion shows are a key part of the fashion industry, providing a platform for designers to showcase their work and connect with buyers, media, and other industry professionals.</p>
                             <a class="btn btn-outline-primary border-2 px-4" href="#">Read More <i
                                     class="fa fa-arrow-right ms-1"></i></a>
                         </div>
@@ -213,10 +130,7 @@
                     <div class="col-md-7">
                         <div class="service-text px-5 px-md-0 py-md-5 text-md-end wow fadeInLeft" data-wow-delay="0.5s">
                             <h3 class="text-uppercase">Corporate Events</h3>
-                            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam feugiat
-                                fermentum urna, sed gravida enim eleifend vitae. Ut rhoncus non metus at convallis.
-                                Maecenas pharetra placerat mauris. Phasellus quis egestas dui. Nullam ornare consectetur
-                                rhoncus. Praesent elit mauris, feugiat quis convallis et, egestas a tellus.</p>
+                            <p class="mb-4">Corporate events are gatherings organized by companies to achieve specific business objectives, such as product launches, conferences, and team-building activities. These events can range from small, intimate meetings to large, multi-day conferences, and may include presentations, networking sessions, and social activities. The goal is to engage attendees, build brand awareness, and drive business results. Events may feature keynote speakers, product demos, and interactive experiences, and are often customized to fit the company's brand and objectives.</p>
                             <a class="btn btn-outline-primary border-2 px-4" href="#">Read More <i
                                     class="fa fa-arrow-right ms-1"></i></a>
                         </div>
@@ -233,10 +147,7 @@
                     <div class="col-md-7">
                         <div class="service-text px-5 px-md-0 py-md-5 wow fadeInRight" data-wow-delay="0.5s">
                             <h3 class="text-uppercase">Commercial Photo Shots</h3>
-                            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam feugiat
-                                fermentum urna, sed gravida enim eleifend vitae. Ut rhoncus non metus at convallis.
-                                Maecenas pharetra placerat mauris. Phasellus quis egestas dui. Nullam ornare consectetur
-                                rhoncus. Praesent elit mauris, feugiat quis convallis et, egestas a tellus.</p>
+                            <p class="mb-4">Commercial photo shoots are professional photography sessions used to promote a product, service, or brand. They're often used in advertising campaigns, social media, and marketing materials. The goal is to create visually appealing images that capture the viewer's attention and convey a message. These shoots typically involve a team, including a photographer, models, stylist, and art director, working together to bring a concept to life. The final images are then used to drive sales, build brand awareness, or promote a specific product or service.</p>
                             <a class="btn btn-outline-primary border-2 px-4" href="#">Read More <i
                                     class="fa fa-arrow-right ms-1"></i></a>
                         </div>
@@ -253,10 +164,7 @@
                     <div class="col-md-7">
                         <div class="service-text px-5 px-md-0 py-md-5 text-md-end wow fadeInLeft" data-wow-delay="0.5s">
                             <h3 class="text-uppercase">Professional Modeling</h3>
-                            <p class="mb-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam feugiat
-                                fermentum urna, sed gravida enim eleifend vitae. Ut rhoncus non metus at convallis.
-                                Maecenas pharetra placerat mauris. Phasellus quis egestas dui. Nullam ornare consectetur
-                                rhoncus. Praesent elit mauris, feugiat quis convallis et, egestas a tellus.</p>
+                            <p class="mb-4">Professional modeling is a career that involves showcasing clothing, products, and lifestyles through photography, runway shows, and other media. Models work with top designers, brands, and agencies, and may specialize in areas like fashion, commercial, or lifestyle modeling. To succeed, models typically need a strong portfolio, professional photos, and a solid understanding of the industry. They must also be able to take direction, work with teams, and maintain a high level of physical fitness and grooming. With experience and success, models can build lucrative careers and work with top clients worldwide.</p>
                             <a class="btn btn-outline-primary border-2 px-4" href="#">Read More <i
                                     class="fa fa-arrow-right ms-1"></i></a>
                         </div>
@@ -279,8 +187,7 @@
                             <h1>Want to be a Model?</h1>
                         </div>
                     </div>
-                    <p class="fs-5 mb-5 wow fadeInUp" data-wow-delay="0.2s">Lorem ipsum dolor sit amet, consectetur
-                        adipiscing elit. Sed erat lectus, venenatis sit amet egestas eget, aliquet a nisl.</p>
+                    <p class="fs-5 mb-5 wow fadeInUp" data-wow-delay="0.2s">If you're thinking of becoming a model, here's what you need to know: you'll need to build a portfolio, get professional photos, and create a strong online presence. Research reputable modeling agencies and submit your info. Stay fit, be professional, and be prepared for opportunities and challenges. With dedication and hard work, you can make it in the modeling industry.</p>
                     <form class="position-relative wow fadeInUp" data-wow-delay="0.3s" method="POST">
                         {% csrf_token %}
                         <input class="form-control border-0 bg-dark rounded-pill w-100 py-4 ps-4 pe-5" type="text"
@@ -519,92 +426,4 @@
         </div>
     </div>
     <!-- Team End -->
-
-
-    <!-- Testimonial Start -->
-{#    <div class="container-fluid py-5 bg-secondary">#}
-{#        <div class="container py-5">#}
-{#            <div class="text-center">#}
-{#                <div class="title wow fadeInUp" data-wow-delay="0.1s">#}
-{#                    <div class="title-center">#}
-{#                        <h5>Testimonial</h5>#}
-{#                        <h1>Our Clients Say</h1>#}
-{#                    </div>#}
-{#                </div>#}
-{#            </div>#}
-{#            <div class="owl-carousel testimonial-carousel wow fadeInUp" data-wow-delay="0.3s">#}
-{#                <div class="testimonial-item text-center"#}
-{#                    data-dot="<img class='img-fluid' src='img/testimonial-1.jpg' alt=''>">#}
-{#                    <p class="fs-5">Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed#}
-{#                        sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum#}
-{#                        justo sea clita.</p>#}
-{#                    <h5 class="text-uppercase">Joanne Irwin</h5>#}
-{#                    <span class="text-primary">Profession</span>#}
-{#                </div>#}
-{#                <div class="testimonial-item text-center"#}
-{#                    data-dot="<img class='img-fluid' src='img/testimonial-2.jpg' alt=''>">#}
-{#                    <p class="fs-5">Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed#}
-{#                        sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum#}
-{#                        justo sea clita.</p>#}
-{#                    <h5 class="text-uppercase">Lana Anderson</h5>#}
-{#                    <span class="text-primary">Profession</span>#}
-{#                </div>#}
-{#                <div class="testimonial-item text-center"#}
-{#                    data-dot="<img class='img-fluid' src='img/testimonial-3.jpg' alt=''>">#}
-{#                    <p class="fs-5">Clita clita tempor justo dolor ipsum amet kasd amet duo justo duo duo labore sed#}
-{#                        sed. Magna ut diam sit et amet stet eos sed clita erat magna elitr erat sit sit erat at rebum#}
-{#                        justo sea clita.</p>#}
-{#                    <h5 class="text-uppercase">Pamela Torney</h5>#}
-{#                    <span class="text-primary">Profession</span>#}
-{#                </div>#}
-{#            </div>#}
-{#        </div>#}
-{#    </div>#}
-    <!-- Testimonial End -->
-
-
-    <!-- Footer Start -->
-    <div class="container-fluid bg-dark text-light footer py-5 wow fadeIn" data-wow-delay="0.1s">
-        <div class="container text-center py-5">
-            <a href="{% url 'my_home' %}">
-                <h1 class="display-4 mb-3 text-white text-uppercase"><i
-                        class="fa-regular fa-face-smile me-1"></i>Poseify</h1>
-            </a>
-            <div class="d-flex justify-content-center mb-4">
-                <a class="btn btn-lg-square btn-outline-primary border-2 m-1" href="#"><i
-                        class="fab fa-x-twitter"></i></a>
-                <a class="btn btn-lg-square btn-outline-primary border-2 m-1" href="#"><i
-                        class="fab fa-facebook-f"></i></a>
-                <a class="btn btn-lg-square btn-outline-primary border-2 m-1" href="#"><i
-                        class="fab fa-youtube"></i></a>
-                <a class="btn btn-lg-square btn-outline-primary border-2 m-1" href="#"><i
-                        class="fab fa-linkedin-in"></i></a>
-            </div>
-            <p>&copy; <a class="border-bottom" href="#">Your Site Name</a>, All Right Reserved.</p>
-
-            <!--/*** The author’s attribution link must remain intact in the template. ***/-->
-            <!--/*** If you wish to remove this credit link, please purchase the Pro Version . ***/-->
-{#            <p class="mb-0">Designed By <a class="border-bottom" href="https://htmlcodex.com">HTML Codex</a>. Distributed by <a href="https://themewagon.com" target="_blank">ThemeWagon</a>.</p>#}
-        </div>
-    </div>
-    <!-- Footer End -->
-
-
-    <!-- Back to Top -->
-    <a href="#" class="btn btn-outline-primary border-2 btn-lg-square back-to-top"><i class="bi bi-arrow-up"></i></a>
-
-
-    <!-- JavaScript Libraries -->
-    <script src="{% static 'misc/jquery-3.4.1.min.js' %}"></script>
-    <script src="{% static 'misc/bootstrap.bundle.min.js' %}"></script>
-    <script src="{% static 'lib/wow/wow.min.js' %}"></script>
-    <script src="{% static 'lib/easing/easing.min.js' %}"></script>
-    <script src="{% static 'lib/waypoints/waypoints.min.js' %}"></script>
-    <script src="{% static 'lib/owlcarousel/owl.carousel.min.js' %}"></script>
-    <script src="{% static 'lib/lightbox/js/lightbox.min.js' %}"></script>
-
-    <!-- Template Javascript -->
-    <script src="{% static 'js/main.js' %}"></script>
-</body>
-
-</html>
+{% endblock %}
